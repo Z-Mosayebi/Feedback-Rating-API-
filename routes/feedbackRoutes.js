@@ -3,7 +3,7 @@ import Feedback from '../models/Feedback.js';
 
 const router = express.Router();
 
-// ✅ GET all feedback
+// GET feedback
 router.get('/', async (req, res) => {
   try {
     const feedback = await Feedback.find().sort({ createdAt: -1 });
@@ -13,7 +13,7 @@ router.get('/', async (req, res) => {
   }
 });
 
-// ✅ POST new feedback
+//  POST new feedback
 router.post('/', async (req, res) => {
   const { text, rating } = req.body;
 
@@ -26,7 +26,7 @@ router.post('/', async (req, res) => {
   }
 });
 
-// ✅ DELETE feedback by ID
+//  DELETE feedback by ID
 router.delete('/:id', async (req, res) => {
   try {
     await Feedback.findByIdAndDelete(req.params.id);
@@ -36,7 +36,7 @@ router.delete('/:id', async (req, res) => {
   }
 });
 
-// ✅ PUT (Update) feedback
+//  PUT (Update) feedback
 router.put('/:id', async (req, res) => {
   const { text, rating } = req.body;
   try {
