@@ -19,7 +19,7 @@ A full-stack feedback app for collecting and managing user reviews with ratings.
 
 ## 📸 Screenshots
 
-![App Preview](./src/components/assets/screenshots.JPG)
+![App Preview](assets/screenshots.JPG)
 
 ---
 
